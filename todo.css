@@ -1,0 +1,52 @@
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+#todo {
+	background: #B3E5FC;
+	border: 1px solid black;
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-right: 30%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 	10px;
+}
+
+input {
+    border: 1px solid black;
+	border-radius: 5px;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+ul.todos {
+	margin-top: 10px;
+}
+		
+.checked {
+    text-decoration: line-through;
+}
+
+li {
+	list-style: none;
+	margin-right: 30px;
+}
+
+button {
+	border: none;
+    background: none;
+    width: 60px;
+    height: 30px;
+}
+
+button:hover {
+	border: 1px solid #FFFFFF;
+	border-radius: 4px;
+}
+
+hr::before {
+	background: red;
+}
