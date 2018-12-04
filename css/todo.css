@@ -3,7 +3,8 @@
 }
 
 #todo {
-	background: #B3E5FC;
+    width: 30%;
+    background: #ececec;
 	border: 1px solid black;
     margin-left: 30%;
     margin-top: 10%;
@@ -35,6 +36,11 @@ li {
 	margin-right: 30px;
 }
 
+div#buttons {
+    display: flex;
+    justify-content: center;
+}
+
 button {
 	border: none;
     background: none;
@@ -43,10 +49,10 @@ button {
 }
 
 button:hover {
-	border: 1px solid #FFFFFF;
+	border: 1px solid #63b0bd;
 	border-radius: 4px;
 }
 
-hr::before {
-	background: red;
+.doneContainer > li:not(.checked) {
+    display: none;
 }

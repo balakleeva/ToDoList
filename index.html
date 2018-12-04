@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>My ToDo List</title>
-        <link rel = "Stylesheet" href = "todo.css">
+        <link rel = "Stylesheet" href = "css/todo.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     </head>
 
@@ -12,18 +12,21 @@
 
         <hr />
 
-        <input type = "text" placeholder="Add new Todo task!">
+        <div class="new_tasks">
+            <input type = "text" placeholder="Add new Todo task!">
+        </div>
 
         <ul class="todos"></ul>
 
-        <div id= "buttons">
+        <div id= "control_buttons">
             <button class="save">Save</button>
             <button class="clear">Clear</button>
             <button class="done">Done</button>
             <button class="all">All</button>
         </div>
+
     </div>
 
-    <script src="external.js"></script>
+    <script src="js/external.js"></script>
     </body>
 </html>

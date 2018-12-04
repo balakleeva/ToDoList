@@ -1,9 +1,22 @@
+const todoArray = [
+    {
+        id: 1,
+        text: "First Todo",
+        done: false
+    }, {
+        id: 2,
+        text: "Second Todo",
+        done: true
+    }
+]
+
 var input = document.querySelector("input[type='text']");
 var ul = document.querySelector("ul");
 var saveBtn = document.querySelector(".save");
 var clearBtn = document.querySelector(".clear");
 var doneTasksBtn = document.querySelector(".done");
 var allTasksBtn = document.querySelector(".all");
+var tasks = document.getElementsByTagName("LI");
 
 
 input.addEventListener("keypress", function(keyPressed){
@@ -15,9 +28,7 @@ input.addEventListener("keypress", function(keyPressed){
 
         ul.appendChild(li).append(newTodo);
         localStorage.setItem("todoList", ul.innerHTML );
-
     }
-
 });
 
 
@@ -46,14 +57,16 @@ clearBtn.addEventListener('click', function () {
 
 
 doneTasksBtn.addEventListener("click", function() {
-	var done = document.getElementsByClassName("checked");
-	ul.append(done[0]);
+	var container = document.querySelector(".todos");
+	container.classList.add('doneContainer');
 });
 
 
 allTasksBtn.addEventListener("click", function () {
-   localStorage.setItem("todoList");
-})
+   var all = document.querySelector(".todos");
+   all.classList.remove('doneContainer');
+});
+
 
 function loadToDo() {
     if (localStorage.getItem("todoList")){
